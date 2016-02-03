@@ -1,0 +1,58 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:background="#0099cc"
+    tools:context=".TempActivity"
+    >
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+           />
+
+
+        <Switch
+            android:layout_width="213dp"
+            android:layout_height="66dp"
+            android:text="Plot"
+            android:id="@+id/switch1"
+            android:layout_gravity="center_horizontal|bottom"
+            android:checked="false" />
+
+        <FrameLayout
+            android:id="@+id/graph_place"
+            android:layout_width="match_parent"
+            android:layout_height="434dp"
+            android:layout_gravity="right|center_vertical">
+
+        </FrameLayout>
+
+    </FrameLayout>
+    <ListView
+        android:layout_width="200dp"
+        android:layout_marginTop="56dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#111"
+        android:id="@+id/navList"/>
+
+</android.support.v4.widget.DrawerLayout>
